@@ -15,7 +15,7 @@ public class QuestionControllerTest {
     @Test
     public void test1() throws IOException {
         QuestionsController controller = new QuestionsController();
-        controller.getQuestions(10, 10000);
+        controller.getQuestions(10, 10);
     }
 
 }

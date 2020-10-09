@@ -1,6 +1,8 @@
 package com.dfl.pairing.io;
 
 import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @Author DengFaLian
@@ -24,4 +26,32 @@ public class FileFunction {
         out.flush();
         out.close();
     }
+
+
+    /**
+     * 读取文件
+     * @param path 读取文件的路径
+     * @return
+     */
+    public Map<Integer, String> readFile(String path) {
+        File file = new File(path);
+//        StringBuilder context = new StringBuilder();
+        Map<Integer, String> map = new HashMap<>();
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), "utf-8"));
+            String temp = null;
+            while ((temp = reader.readLine()) != null) {
+//                context.append(temp + System.lineSeparator());
+                map.put(Integer.valueOf(temp.split(". ")[0]), temp.split(". ")[1]);
+            }
+        } catch (UnsupportedEncodingException unsupportedEncodingException) {
+            unsupportedEncodingException.printStackTrace();
+        } catch (FileNotFoundException fileNotFoundException) {
+            fileNotFoundException.printStackTrace();
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+        }
+        return map;
+    }
 }
+

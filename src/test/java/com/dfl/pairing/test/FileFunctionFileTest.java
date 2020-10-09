@@ -4,6 +4,7 @@ import com.dfl.pairing.io.FileFunction;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.util.Map;
 
 /**
  * @Author DengFaLian
@@ -17,5 +18,11 @@ public class FileFunctionFileTest {
         StringBuilder context = new StringBuilder();
         context.append("你好");
         new FileFunction().saveFile("answer.txt", context);
+    }
+
+    @Test
+    public void test2() {
+        Map<Integer, String> context = new FileFunction().readFile("answer.txt");
+        System.out.println(context);
     }
 }
