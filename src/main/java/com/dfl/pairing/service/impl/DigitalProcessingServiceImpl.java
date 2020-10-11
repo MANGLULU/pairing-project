@@ -47,28 +47,25 @@ public class DigitalProcessingServiceImpl implements DigitalProcessingService {
         Fraction fraction = new Fraction();
         fraction.setElement((int) (0 + Math.random() * (number)));
         fraction.setDenominator((int) (1 + Math.random() * (number - 1)));
-//        if(fraction.getElement() >= number || fraction.getDenominator() >= number) {
-//            System.err.println("数值大于规定数值");
-//        }
         return fraction;
     }
 
     @Override
-    public char getSymbol() {
-        char symbol = ' ';
+    public String getSymbol() {
+        String symbol = "";
         int symbolNumber = (int) (Math.random() * 4);
         switch (symbolNumber) {
             case 0 :
-                symbol = '+';
+                symbol = "+";
                 break;
             case 1 :
-                symbol = '-';
+                symbol = "-";
                 break;
             case 2 :
-                symbol = '*';
+                symbol = "×";
                 break;
             case 3 :
-                symbol = '/';
+                symbol = "÷";
                 break;
             default:
                 System.out.println("获取符号失败");

@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Map;
 
 /**
- * @Author DengFaLian
+ * @Author FangZeKai
  * @Date 2020/10/2 22:18
  * @Version 1.0
  */
@@ -17,12 +17,12 @@ public class FileFunctionFileTest {
     public void test1() throws IOException {
         StringBuilder context = new StringBuilder();
         context.append("你好");
-        new FileFunction().saveFile("answer.txt", context);
+        new FileFunction().saveFile("Hello.txt", context);
     }
 
     @Test
     public void test2() {
-        Map<Integer, String> context = new FileFunction().readFile("answer.txt");
+        Map<Integer, String> context = new FileFunction().readFile("Answer.txt");
         System.out.println(context);
     }
 }

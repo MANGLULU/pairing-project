@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Author DengFaLian
+ * @Author FangZeKai
  * @Date 2020/10/4 22:32
  * @Version 1.0
  */
@@ -27,8 +27,6 @@ public class DigitalProcessingServiceTest {
 
     @Test
     public void test2() {
-//        int commonMeasure = digitalProcessingService.getCommonMeasure(0, 7);
-//        Assert.assertEquals(1,commonMeasure);
         int i = 0;
         while (i < 100) {
             Fraction number = digitalProcessingService.getNumber(10);
@@ -49,12 +47,12 @@ public class DigitalProcessingServiceTest {
 
     @Test
     public void test4() {
-        char symbol = digitalProcessingService.getSymbol();
-        Map<Character, Integer> map = new HashMap<>();
-        map.put('+', 0);
-        map.put('-', 1);
-        map.put('*', 2);
-        map.put('/', 3);
+        String symbol = digitalProcessingService.getSymbol();
+        Map<String, Integer> map = new HashMap<>();
+        map.put("+", 0);
+        map.put("-", 1);
+        map.put("×", 2);
+        map.put("÷", 3);
         Assert.assertEquals(true, map.containsKey(symbol));
     }
 }

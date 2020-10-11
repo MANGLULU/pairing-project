@@ -25,5 +25,5 @@ public interface ContrastService {
      * @param actualFilePath 答题的文件
      * @throws IOException
      */
-    void getResult(String answerFilePath, String actualFilePath) throws IOException;
+    void writeResult(String answerFilePath, String actualFilePath) throws IOException;
 }

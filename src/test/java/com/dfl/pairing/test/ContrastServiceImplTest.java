@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Author DengFaLian
+ * @Author FangZeKai
  * @Date 2020/10/9 16:34
  * @Version 1.0
  */
@@ -30,6 +30,6 @@ public class ContrastServiceImplTest {
 
     @Test
     public void test2() throws IOException {
-        contrastService.getResult("Answer.txt", "Answer.txt");
+        contrastService.writeResult("exercisefile.txt", "Answer.txt");
     }
 }

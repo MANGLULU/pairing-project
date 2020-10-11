@@ -35,14 +35,12 @@ public class FileFunction {
      */
     public Map<Integer, String> readFile(String path) {
         File file = new File(path);
-//        StringBuilder context = new StringBuilder();
         Map<Integer, String> map = new HashMap<>();
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(file), "utf-8"));
             String temp = null;
             while ((temp = reader.readLine()) != null) {
-//                context.append(temp + System.lineSeparator());
-                map.put(Integer.valueOf(temp.split(". ")[0]), temp.split(". ")[1]);
+                map.put(Integer.parseInt(temp.split(". ")[0]), temp.split(". ")[1]);
             }
         } catch (UnsupportedEncodingException unsupportedEncodingException) {
             unsupportedEncodingException.printStackTrace();

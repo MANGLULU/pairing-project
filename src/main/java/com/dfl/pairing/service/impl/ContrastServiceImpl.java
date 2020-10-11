@@ -37,7 +37,7 @@ public class ContrastServiceImpl implements ContrastService {
     }
 
     @Override
-    public void getResult(String answerFilePath, String actualFilePath) throws IOException {
+    public void writeResult(String answerFilePath, String actualFilePath) throws IOException {
         FileFunction fileHandler = new FileFunction();
         StringBuilder context = new StringBuilder();
         Map<Integer, String> answerFile = fileHandler.readFile(answerFilePath);

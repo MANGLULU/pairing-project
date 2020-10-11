@@ -2,8 +2,6 @@ package com.dfl.pairing.service;
 
 import com.dfl.pairing.entity.Fraction;
 
-import java.util.List;
-
 /**
  * @Author DengFaLian
  * @Date 2020/10/3 14:59
@@ -39,5 +37,5 @@ public interface DigitalProcessingService {
      * 获得符号
      * @return
      */
-    char getSymbol();
+    String getSymbol();
 }
