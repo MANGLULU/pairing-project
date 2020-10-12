@@ -67,8 +67,8 @@ public class CalculateImpl implements Calculate{
             case "+":
             case "-":
                 return 1;
-            case "*":
-            case "/":
+            case "×":
+            case "÷":
                 return 2;
         }
         throw new RuntimeException(symbol +" is not a letter");
@@ -85,12 +85,6 @@ public class CalculateImpl implements Calculate{
             }else{
                 num1 = calculateStack.pop();
                 num2 = calculateStack.pop();
-//                Fraction num = calculateNum(num2, num1, str.getSymbol());
-//                if (num.getError() == "@") {
-//                    Fraction fraction = new Fraction();
-//                    fraction.setError("@");
-//                    return fraction;
-//                }
                 calculateStack.push(calculateNum(num2,num1,str.getSymbol()));
             }
         }

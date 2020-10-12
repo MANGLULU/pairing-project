@@ -1,6 +1,6 @@
 package com.dfl.pairing.test;
 
-import com.dfl.pairing.controller.QuestionsController2;
+import com.dfl.pairing.controller.QuestionsController;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -14,7 +14,7 @@ public class QuestionControllerTest {
 
     @Test
     public void test1() throws IOException {
-        QuestionsController2 controller = new QuestionsController2();
+        QuestionsController controller = new QuestionsController();
         controller.getQuestions(10, 10);
     }
 

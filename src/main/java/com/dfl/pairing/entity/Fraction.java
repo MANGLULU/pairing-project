@@ -114,17 +114,17 @@ public class Fraction {
         }
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Fraction)) return false;
-        Fraction number = (Fraction) o;
-        return getElement() == number.getElement() &&
-                getDenominator() == number.getDenominator();
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getElement(), getDenominator());
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (!(o instanceof Fraction)) return false;
+//        Fraction number = (Fraction) o;
+//        return getElement() == number.getElement() &&
+//                getDenominator() == number.getDenominator();
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(getElement(), getDenominator());
+//    }
 }

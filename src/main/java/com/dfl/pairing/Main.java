@@ -1,6 +1,6 @@
 package com.dfl.pairing;
 
-import com.dfl.pairing.controller.QuestionsController2;
+import com.dfl.pairing.controller.QuestionsController;
 import com.dfl.pairing.service.ContrastService;
 import com.dfl.pairing.service.impl.ContrastServiceImpl;
 
@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        QuestionsController2 questionsController = new QuestionsController2();
+        QuestionsController questionsController = new QuestionsController();
         System.out.println("请根据如下格式输入！");
         System.out.println("-n 生成题目的个数 -r 题目数值的范围");
         Scanner scanner = new Scanner(System.in);

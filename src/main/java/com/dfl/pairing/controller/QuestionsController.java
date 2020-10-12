@@ -16,7 +16,7 @@ import java.util.List;
  * @Date 2020/10/5 10:36
  * @Version 1.0
  */
-public class QuestionsController2 {
+public class QuestionsController {
 
     public void getQuestions(int count, int number) throws IOException {
         DigitalProcessingService digitalProcessing = new DigitalProcessingServiceImpl();
